@@ -2,9 +2,12 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project.makeModule(
-    name: "Service",
+    name: "Presentor",
     product: .staticFramework,
     dependencies: [
-        .Projcet.ThirdPartyLib
+        .Projcet.Util,
+        .SPM.snpaKit,
+        .SPM.then
     ]
+//    resources: ["Resources/**"]
 )

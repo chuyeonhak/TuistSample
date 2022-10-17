@@ -1,7 +1,7 @@
 import ProjectDescription
 
 let workspace = Workspace(
-    name: "Sample",
+    name: "CloneCoding",
     projects: [
         "Projects/App"
     ]

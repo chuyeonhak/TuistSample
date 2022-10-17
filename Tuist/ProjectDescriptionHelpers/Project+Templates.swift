@@ -14,7 +14,7 @@ public extension Project {
         infoPlist: InfoPlist = .default
     ) -> Project {
         let settings: Settings = .settings(
-            base: [:],
+            base: .init().automaticCodeSigning(devTeam: "GP9D94CZ57"),
             configurations: [
                 .debug(name: .debug),
                 .release(name: .release)

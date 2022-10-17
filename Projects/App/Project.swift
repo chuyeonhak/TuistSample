@@ -2,11 +2,12 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project.makeModule(
-    name: "Sample",
+    name: "App",
     platform: .iOS,
     product: .app,
     dependencies: [
-        .Projcet.Feature
+        .Projcet.Presentor,
+        .Projcet.Util
     ],
     resources: ["Resources/**"],
     infoPlist: .file(path: "Support/Info.plist")

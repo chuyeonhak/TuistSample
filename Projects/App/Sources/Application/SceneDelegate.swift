@@ -1,5 +1,5 @@
 import UIKit
-import Feature
+import Presentor
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
