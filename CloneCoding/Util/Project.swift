@@ -5,6 +5,9 @@ let project = Project.makeModule(
     name: "Util",
     product: .staticFramework,
     dependencies: [
-        .Projcet.ThirdPartyLib
+        .SPM.snpaKit,
+        .SPM.rxCocoa,
+        .SPM.rxSwift,
+        .SPM.rxRelay
     ]
 )

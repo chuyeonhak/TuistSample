@@ -5,7 +5,8 @@ public extension TargetDependency {
 }
 
 public extension TargetDependency.Projcet {
-    static let Presentor = TargetDependency.project(target: "Presentor", path: .relativeToRoot("Projects/Presentor"))
-    static let Util = TargetDependency.project(target: "Util", path: .relativeToRoot("Projects/Util"))
-    static let ThirdPartyLib = TargetDependency.project(target: "ThirdPartyLib", path: .relativeToRoot("Projects/ThirdPartyLib"))
+    static let Design = TargetDependency.project(target: "Design", path: .relativeToRoot("CloneCoding/Design"))
+    static let Presentation = TargetDependency.project(target: "Presentation", path: .relativeToRoot("CloneCoding/Presentation"))
+    static let Repository = TargetDependency.project(target: "Repository", path: .relativeToRoot("CloneCoding/Repository"))
+    static let Util = TargetDependency.project(target: "Util", path: .relativeToRoot("CloneCoding/Util"))
 }

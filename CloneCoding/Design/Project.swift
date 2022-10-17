@@ -1,13 +1,21 @@
+//
+//  Project.swift
+//  ProjectDescriptionHelpers
+//
+//  Created by chuchu on 2022/10/17.
+//
+
 import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project.makeModule(
-    name: "Presentor",
+    name: "Design",
     product: .staticFramework,
     dependencies: [
         .Projcet.Util,
         .SPM.snpaKit,
         .SPM.then
-    ]
-//    resources: ["Resources/**"]
+    ],
+    sources: "Sources/**",
+    resources: ["Resources/**"]
 )
