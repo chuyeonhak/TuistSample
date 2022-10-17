@@ -4,6 +4,8 @@ import Presentor
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var appFlowCoordinator: AppFlowCoordinator?
+    var appDIContainer = AppDIContainer()
 
     func scene(
         _ scene: UIScene,
@@ -12,8 +14,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let viewController = MainViewController()
-        window?.rootViewController = viewController
+        let tabBarController = UITabBarController()
+        
+        window?.rootViewController = tabBarController
+        appFlowCoordinator = AppFlowCoordinator(tabBarController: tabBarController, appDIContainer: appDIContainer)
+        appFlowCoordinator?.start()
         window?.makeKeyAndVisible()
     }
 
