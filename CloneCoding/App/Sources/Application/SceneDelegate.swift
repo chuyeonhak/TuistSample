@@ -13,13 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         guard let scene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: scene)
-        let tabBarController = UITabBarController()
-        
-        window?.rootViewController = tabBarController
-        appFlowCoordinator = AppFlowCoordinator(tabBarController: tabBarController, appDIContainer: appDIContainer)
+        appFlowCoordinator = AppFlowCoordinator(UIWindow(windowScene: scene), appDIContainer: appDIContainer)
         appFlowCoordinator?.start()
-        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {}
