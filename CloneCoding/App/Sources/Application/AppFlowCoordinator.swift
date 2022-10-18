@@ -45,6 +45,8 @@ final class AppFlowCoordinator: Coordinator {
         let fifthItem = UITabBarItem(title: "전체", image: nil, tag: 5)
         
         let vc1 = UINavigationController()
+        let homeView = HomeViewController()
+        vc1.viewControllers = [homeView]
         vc1.view.backgroundColor = .white
         vc1.tabBarItem = firstItem
         vc1.navigationItem.titleView?.isHidden = false
